@@ -16,7 +16,7 @@ img{
 }
 h1{
     text-transform: uppercase;
-    font-size: calc(1vw/1vh);
+    font-size: 200px;
     font-weight: 400;
     letter-spacing: -4px;
 }
@@ -28,7 +28,5 @@ h1{
     height: 100vh;
 }
 #section2 h1{
-    /* font-size: 19rem; */
-    font-size: calc(3vw/2vh);
-
+    font-size: 19rem;
 }

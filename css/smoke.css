@@ -10,7 +10,6 @@
     backdrop-filter: blur(2px) grayscale(100%);
 }
 #section2 h1{
-    font-size: calc(1vw/1vh);
     height: 100%;
     z-index: 9999;
     color: #fff;
