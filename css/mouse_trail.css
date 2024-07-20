@@ -1,0 +1,85 @@
+.section3{
+    background-color: black;
+    position: relative;
+    height: 500vh;
+}
+.section3 canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section3 .canvas-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index: ; */
+    height: 100%;
+    width: 100%;
+}
+.section3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section3 a,p{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+
+.section3 .container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    mix-blend-mode: difference;
+    /* z-index: 2; */
+}
+
+.section3 nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+.section3 nav > div{
+    flex: 1;
+}
+
+.section3 .logo a{
+    font-weight: 400;
+}
+
+/* .section3 .header{
+    position: relative;
+    top: 8em;
+    margin-bottom: 12em;
+} */
+
+.section3 .hero-img img{
+    width: 100%;
+    height: 800px;
+    padding-bottom: 1em;
+    filter: saturate(0);
+    overflow: hidden;
+}
+
+.section3 .copy{
+    position: relative;
+    margin: 1em 0;
+    padding-bottom: 2em;
+}
+
+.section3 .copy p{
+    opacity: 0.75;
+    margin-bottom: 2em;
+}
+

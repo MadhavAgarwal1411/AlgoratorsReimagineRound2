@@ -44,7 +44,7 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         const progress = self.progress;
         const clipPath = `polygon(
-    ${45 - 45 * progress}% ${0 + 0 * progress}%,
+    ${45 - 40 * progress}% ${0 + 0 * progress}%,
     ${55 + 45 * progress}% ${0 + 0 * progress}%,
     ${55 + 45 * progress}% ${100 - 0 * progress}%,
     ${45 - 45 * progress}% ${100 - 0 * progress}%
