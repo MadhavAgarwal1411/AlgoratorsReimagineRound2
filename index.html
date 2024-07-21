@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/smoke.css" />
         <link rel="stylesheet" href="css/custom_cursor.css" />
         <link rel="stylesheet" href="css/curved_borders.css" />
+        <link rel="stylesheet" href="css/nav.css" />
+        <link rel="stylesheet" href="css/slider.css" />
         <!-- <link rel="stylesheet" href="css/mouse_trail.css"> -->
         <!-- <link rel="stylesheet" href="css/scrolling_videos.css"> -->
 
@@ -23,7 +25,12 @@
                 width: 100%;
                 height: 100%;
             }
-
+            #section2 .horizontal canvas {
+                position: sticky;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
             .dg {
                 opacity: 0.9;
             }
@@ -167,7 +174,6 @@
             }
         </style>
 
-        
         <script>
             window.ga =
                 window.ga ||
@@ -202,6 +208,23 @@
         <div class="section"id="page3"></div>
     </div> -->
         <main>
+            <nav theme="light" class="nav-w">
+                <div class="nav-inner">
+                    <a data-nav-item="" href="#" class="text-link">Yesterday</a>
+                    <a href="#" data-nav-item="" class="text-link">Today</a>
+                    <a href="#" data-nav-item="" class="text-link">Tomorrow</a>
+                    <a href="#" data-nav-item="" class="text-link">
+                        <img src="assets/images/logo.png" alt="" />
+                    </a>
+                    <a href="#" data-nav-item="" class="text-link"
+                        >COSMIC ART</a
+                    >
+                    <a data-nav-item="" href="#" class="text-link"
+                        >MECHANICAL WONDERS</a
+                    >
+                    <a data-nav-item="" href="#" class="text-link">BESPOKE</a>
+                </div>
+            </nav>
             <section class="section" id="section1">
                 <div class="container legend">
                     <section class="hero">
@@ -222,15 +245,11 @@
                                 type="video/mp4"
                             />
                         </video>
-                        <h1>ROYAL</h1>
-
+                        <h1 style="bottom: 2em">ROYAL</h1>
                     </section>
-                    <div id="container3D">
-                        
-                    </div>
+                    <div id="container3D"></div>
 
-                    <section class="info " >
-
+                    <section class="info">
                         <div class="header-rows">
                             <div class="header-row">
                                 <h1>LOUIS</h1>
@@ -241,7 +260,7 @@
                         </div>
                     </section>
                     <section class="header-info">
-                        <h1>    COSMIC ART</h1>
+                        <h1>COSMIC ART</h1>
                         <div class="header-images">
                             <div class="img interactable">
                                 <img
@@ -282,7 +301,7 @@
                             <div class="revealer-2"></div>
                         </div>
                     </section>
-                    <section class="website-content ">
+                    <section class="website-content">
                         <!-- <div id="main">
                         <div id="page">
                             <canvas id="first"></canvas>
@@ -299,11 +318,110 @@
                     <div class="section"id="page7"></div>
                     <div class="section"id="page8"></div>
                     <div class="section"id="page9"></div> -->
-                        <section class="section" id="section2">
-                            <h1 class="">NEW ARRIVALS</h1>
+                        <section id="section2">
                             <canvas id="smoke-canvas"></canvas>
                             <div class="blur"></div>
+                            <div class="horizontal">
+                                <div class="part1">
+                                    <h1 class="">NEW ARRIVALS</h1>
+                                </div>
+                                    <div class="page5">
+                                        <div class="list">
+                                            <div class="item">
+                                                <img
+                                                    src="assets/images/cosmic/image1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="item">
+                                                <img
+                                                    src="assets/images/cosmic/image2.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="item">
+                                                <img
+                                                    src="assets/images/cosmic/image3.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="item">
+                                                <img
+                                                    src="assets/images/cosmic/image4.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="item">
+                                                <img
+                                                    src="assets/images/cosmic/image5.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="item">
+                                                <img
+                                                    src="assets/images/cosmic/image6.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="arrows">
+                                            <button id="prev">&lt;</button>
+                                            <button id="next">&gt;</button>
+                                        </div>
+                                    </div>
+                               
+                                <div class="part3">
+                                    <h1 class="">OUR BESTSELLERS</h1>
+                                </div>
+                                <div class="page5">
+                                    <div class="list">
+                                        <div class="item">
+                                            <img
+                                                src="assets/images/cosmic/image1.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="item">
+                                            <img
+                                                src="assets/images/cosmic/image2.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="item">
+                                            <img
+                                                src="assets/images/cosmic/image3.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="item">
+                                            <img
+                                                src="assets/images/cosmic/image4.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="item">
+                                            <img
+                                                src="assets/images/cosmic/image5.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="item">
+                                            <img
+                                                src="assets/images/cosmic/image6.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="arrows">
+                                        <button id="prev">&lt;</button>
+                                        <button id="next">&gt;</button>
+                                    </div>
+                                </div>
+                            </div>
+
                         </section>
+                        <div class="extra_content" style="height: 100vh;"></div>
+
                         <!-- <section class="section3">
                         <div class="canvas-container">
                         </div>
@@ -359,6 +477,8 @@
         <script src="scripts/smoke.js"></script>
 
         <script src="scripts/custom_cursor.js"></script>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/slider.js"></script>
         <!-- <script src="scripts/mouse_trail.js"></script> -->
         <!-- <script src="scripts/scrolling_videos.js"></script> -->
     </body>

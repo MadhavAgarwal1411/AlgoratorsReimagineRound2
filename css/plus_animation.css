@@ -12,7 +12,7 @@ section.hero{
     background-size: inherit;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:end;
 }
 
 .hero h1{
