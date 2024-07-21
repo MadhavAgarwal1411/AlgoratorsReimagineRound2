@@ -24,7 +24,7 @@ SOFTWARE.
 
 // Simulation section
 
-const canvas = document.getElementsByTagName('canvas')[0];
+const canvas = document.querySelector('#smoke-canvas');
 resizeCanvas();
 
 let config = {

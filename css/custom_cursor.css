@@ -1,0 +1,17 @@
+
+@media(hover: hover){
+    .cursor{
+        background-color: white !important;
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 50% !important;
+        position: absolute !important;
+        mix-blend-mode: difference !important;
+        transition: all ease 0.1s !important;
+        z-index: 99999 !important;
+    }
+}
+.interactable:hover{
+    background-size: 105%!important;
+    opacity: 0.8!important;
+}

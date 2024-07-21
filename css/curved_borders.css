@@ -1,0 +1,106 @@
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.dark {
+    background-color: rgb(22, 21, 21);
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: rgb(31, 30, 37);
+    transform: translate(85%, 60%);
+}
+
+.curve::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: blue;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+
+.bubble::after {
+    content: "";
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    height: 85%;
+    width: 100%;
+    background-color: rgb(22, 21, 21);
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(116% + 1.3px);
+    height: 169px;
+}
+
+.wave .shape-fill {
+    fill: #000000;
+}
+.spacer{
+    aspect-ratio: 900/600;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.layer1{
+    background-image: url('layered-waves-haikei.svg');
+}
+.custom-shape-divider-top-1720953779 {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+overflow: hidden;
+line-height: 0;
+}
+
+.custom-shape-divider-top-1720953779 svg {
+position: relative;
+display: block;
+width: calc(102% + 1.3px);
+height: 129px;
+}
+
+.custom-shape-divider-top-1720953779 .shape-fill {
+fill: #E71A1A;
+}

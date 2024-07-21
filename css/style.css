@@ -12,7 +12,11 @@ body,html{
 img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: inherit;
+}
+.header-images .img{
+    height: 50vh;
+    width: 20vw;
 }
 h1{
     text-transform: uppercase;
@@ -30,3 +34,17 @@ h1{
 #section2 h1{
     font-size: 19rem;
 }
+.header-info{
+    position: relative;
+}
+#container3D {
+    position: relative;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgb(206, 201, 191);
+}
+#container3D canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

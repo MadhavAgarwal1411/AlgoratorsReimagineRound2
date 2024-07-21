@@ -1,179 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Louis Moinet</title>
+        <link rel="stylesheet" href="css/plus_animation.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/smoke.css" />
+        <link rel="stylesheet" href="css/custom_cursor.css" />
+        <link rel="stylesheet" href="css/curved_borders.css" />
+        <!-- <link rel="stylesheet" href="css/mouse_trail.css"> -->
+        <!-- <link rel="stylesheet" href="css/scrolling_videos.css"> -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis Moinet</title>
-    <link rel="stylesheet" href="css/plus_animation.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/smoke.css">
-    <!-- <link rel="stylesheet" href="css/mouse_trail.css"> -->
-    <!-- <link rel="stylesheet" href="css/scrolling_videos.css"> -->
-
-    <style>
-        @font-face {
-            font-family: 'iconfont';
-            src: url('iconfont.ttf') format('truetype');
-        }
-
-
-        canvas {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .dg {
-            opacity: 0.9;
-        }
-
-        .dg .property-name {
-            overflow: visible;
-        }
-
-        .bigFont {
-            font-size: 150%;
-            color: #8C8C8C;
-        }
-
-        .cr.function.appBigFont {
-            font-size: 150%;
-            line-height: 27px;
-            color: #A5F8D3;
-            background-color: #023C40;
-        }
-
-        .cr.function.appBigFont .property-name {
-            float: none;
-        }
-
-        .cr.function.appBigFont .icon {
-            position: sticky;
-            bottom: 27px;
-        }
-
-        .icon {
-            font-family: 'iconfont';
-            font-size: 130%;
-            float: right;
-        }
-
-        .twitter:before {
-            content: 'a';
-        }
-
-        .github:before {
-            content: 'b';
-        }
-
-        .app:before {
-            content: 'c';
-        }
-
-        .discord:before {
-            content: 'd';
-        }
-
-        .promo {
-            display: none;
-            /* display: table; */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            overflow: auto;
-            color: lightblue;
-            background-color: rgba(0,0,0,0.4);
-            animation: promo-appear-animation 0.35s ease-out;
-        }
-
-        .promo-middle {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        .promo-content {
-            width: 80vw;
-            height: 80vh;
-            max-width: 80vh;
-            max-height: 80vw;
-            margin: auto;
-            padding: 0;
-            font-size: 2.8vmax;
-            font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-            text-align: center;
-            background-image: url("promo_back.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        }
-
-        .promo-header {
-            height: 10%;
-            padding: 2px 16px;
-        }
-
-        .promo-close {
-            width: 10%;
-            height: 100%;
-            text-align: left;
-            float: left;
-            font-size: 1.3em;
-            /* transition: 0.2s; */
-        }
-
-        .promo-close:hover {
-            /* transform: scale(1.25); */
-            cursor: pointer;
-        }
-
-        .promo-body {
-            padding: 8px 16px 16px 16px;
-            margin: auto;
-        }
-
-        .promo-body p {
-            margin-top: 0;
-            mix-blend-mode: color-dodge;
-        }
-
-        .link {
-            width: 100%;
-            display: inline-block;
-        }
-
-        .link img {
-            width: 100%;
-        }
-
-        @keyframes promo-appear-animation {
-            0% {
-                transform: scale(2.0);
-                opacity: 0;
+        <style>
+            @font-face {
+                font-family: "iconfont";
+                src: url("iconfont.ttf") format("truetype");
             }
-            100% {
-                transform: scale(1.0);
-                opacity: 1;
-            }
-        }
-        .dg.ac{
-        display: none;
-    } 
-    </style>
-    <script>
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-105392568-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-</head>
 
-<body>
-    <!-- <div id="main">
+            canvas {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .dg {
+                opacity: 0.9;
+            }
+
+            .dg .property-name {
+                overflow: visible;
+            }
+
+            .bigFont {
+                font-size: 150%;
+                color: #8c8c8c;
+            }
+
+            .cr.function.appBigFont {
+                font-size: 150%;
+                line-height: 27px;
+                color: #a5f8d3;
+                background-color: #023c40;
+            }
+
+            .cr.function.appBigFont .property-name {
+                float: none;
+            }
+
+            .cr.function.appBigFont .icon {
+                position: sticky;
+                bottom: 27px;
+            }
+
+            .icon {
+                font-family: "iconfont";
+                font-size: 130%;
+                float: right;
+            }
+
+            .twitter:before {
+                content: "a";
+            }
+
+            .github:before {
+                content: "b";
+            }
+
+            .app:before {
+                content: "c";
+            }
+
+            .discord:before {
+                content: "d";
+            }
+
+            .promo {
+                display: none;
+                /* display: table; */
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                overflow: auto;
+                color: lightblue;
+                background-color: rgba(0, 0, 0, 0.4);
+                animation: promo-appear-animation 0.35s ease-out;
+            }
+
+            .promo-middle {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .promo-content {
+                width: 80vw;
+                height: 80vh;
+                max-width: 80vh;
+                max-height: 80vw;
+                margin: auto;
+                padding: 0;
+                font-size: 2.8vmax;
+                font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+                text-align: center;
+                background-image: url("promo_back.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .promo-header {
+                height: 10%;
+                padding: 2px 16px;
+            }
+
+            .promo-close {
+                width: 10%;
+                height: 100%;
+                text-align: left;
+                float: left;
+                font-size: 1.3em;
+                /* transition: 0.2s; */
+            }
+
+            .promo-close:hover {
+                /* transform: scale(1.25); */
+                cursor: pointer;
+            }
+
+            .promo-body {
+                padding: 8px 16px 16px 16px;
+                margin: auto;
+            }
+
+            .promo-body p {
+                margin-top: 0;
+                mix-blend-mode: color-dodge;
+            }
+
+            .link {
+                width: 100%;
+                display: inline-block;
+            }
+
+            .link img {
+                width: 100%;
+            }
+
+            @keyframes promo-appear-animation {
+                0% {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            .dg.ac {
+                display: none;
+            }
+        </style>
+
+        
+        <script>
+            window.ga =
+                window.ga ||
+                function () {
+                    (ga.q = ga.q || []).push(arguments);
+                };
+            ga.l = +new Date();
+            ga("create", "UA-105392568-1", "auto");
+            ga("send", "pageview");
+        </script>
+    </head>
+
+    <body>
+        <!-- <div class="wave-container"style="position: relative;">
+            <div class="wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+        </div> -->
+        <div class="cursor"></div>
+
+        <!-- <div id="main">
         <div id="page">
             <canvas id="first"></canvas>
         </div>
@@ -181,47 +201,89 @@
         <div class="section"id="page2"></div>
         <div class="section"id="page3"></div>
     </div> -->
-    <main>
-        <section class="section" id="section1">
-            <div class="container legend">
-                <section class="hero">
-                    <video width="100%" height="100%" loop="" controlslist="nodownload nofullscreen noremoteplayback"
-                        id="hero-vid" autoplay="true" playsinline="true" muted="" poster="assets/images/hero_image.jpg"
-                        class="hero-video cover">
-                        <source src="assets/videos/hero_video.mp4" type="video/mp4" />
-                    </video>
-                    <h1>ROYAL</h1>
-                </section>
-                <section class="info">
-                    <div class="header-rows">
-                        <div class="header-row">
-                            <h1>LOUIS</h1>
+        <main>
+            <section class="section" id="section1">
+                <div class="container legend">
+                    <section class="hero">
+                        <video
+                            width="100%"
+                            height="100%"
+                            loop=""
+                            controlslist="nodownload nofullscreen noremoteplayback"
+                            id="hero-vid"
+                            autoplay="true"
+                            playsinline="true"
+                            muted=""
+                            poster="assets/images/hero_image.jpg"
+                            class="hero-video cover interactable"
+                        >
+                            <source
+                                src="assets/videos/hero_video.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                        <h1>ROYAL</h1>
+
+                    </section>
+                    <div id="container3D">
+                        
+                    </div>
+
+                    <section class="info " >
+
+                        <div class="header-rows">
+                            <div class="header-row">
+                                <h1>LOUIS</h1>
+                            </div>
+                            <div class="header-row">
+                                <h1>MOINET</h1>
+                            </div>
                         </div>
-                        <div class="header-row">
-                            <h1>MOINET</h1>
+                    </section>
+                    <section class="header-info">
+                        <h1>    COSMIC ART</h1>
+                        <div class="header-images">
+                            <div class="img interactable">
+                                <img
+                                    src="assets/images/cosmic/image1.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="img interactable">
+                                <img
+                                    src="assets/images/cosmic/image2.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="img interactable">
+                                <img
+                                    src="assets/images/cosmic/image3.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="img interactable">
+                                <img
+                                    src="assets/images/cosmic/image4.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="img interactable">
+                                <img
+                                    src="assets/images/cosmic/image5.png"
+                                    alt=""
+                                />
+                            </div>
                         </div>
-                    </div>
-                </section>
-                <section class="header-info">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint fugiat earum veritatis fugit neque
-                        animi.
-                    </p>
-                    <div class="header-images">
-                        <!-- <div class="img"><img src="assets/images/first/1.jpg" alt=""></div>
-                        <div class="img"><img src="assets/images/first/2.jpg" alt=""></div>
-                        <div class="img"><img src="assets/images/first/3.jpg" alt=""></div>
-                        <div class="img"><img src="assets/images/first/4.jpg" alt=""></div> -->
-                    </div>
-                </section>
-                <section class="whitespaces"></section>
-                <section class="pinned">
-                    <div class="revealer">
-                        <div class="revealer-1"></div>
-                        <div class="revealer-2"></div>
-                    </div>
-                </section>
-                <section class="website-content">
-                    <!-- <div id="main">
+                    </section>
+                    <section class="whitespaces"></section>
+                    <section class="pinned">
+                        <div class="revealer">
+                            <div class="revealer-1"></div>
+                            <div class="revealer-2"></div>
+                        </div>
+                    </section>
+                    <section class="website-content ">
+                        <!-- <div id="main">
                         <div id="page">
                             <canvas id="first"></canvas>
 
@@ -231,19 +293,18 @@
                         <div class="section"id="page3"></div>
                     </div> -->
 
-                    <!-- <div class="section"id="page4"></div>
+                        <!-- <div class="section"id="page4"></div>
                     <div class="section"id="page5"></div>
                     <div class="section"id="page6"></div>
                     <div class="section"id="page7"></div>
                     <div class="section"id="page8"></div>
                     <div class="section"id="page9"></div> -->
-                    <section class="section" id="section2">
-                        <h1>NEW ARRIVALS</h1>
-                            <canvas></canvas>
-                
-                        <div class="blur"></div>
-                    </section>
-                    <!-- <section class="section3">
+                        <section class="section" id="section2">
+                            <h1 class="">NEW ARRIVALS</h1>
+                            <canvas id="smoke-canvas"></canvas>
+                            <div class="blur"></div>
+                        </section>
+                        <!-- <section class="section3">
                         <div class="canvas-container">
                         </div>
 
@@ -275,10 +336,9 @@
                                 <img src="assets/images/new_arrivals/image3.png" alt="">
                             </div>
                             <div class="header">
-                                <img src="assets/images/new_arrivals/image4.png" alt="">
+                               <img src="assets/images/new_arrivals/image4.png" alt="">
                             </div>
                         </div> -->
-
 
                         <!-- <div class="container">
                             <canvas></canvas>
@@ -286,21 +346,20 @@
                             <div class="blur"></div>
                         </div> -->
                     </section>
-            </div>
-        </section>
+                </div>
+            </section>
+        </main>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
+        <script type="module" src="scripts/model.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+        <script src="scripts/plus_animation.js"></script>
+        <script src="scripts/dat.gui.min.js"></script>
+        <script src="scripts/smoke.js"></script>
 
-        </section>
-
-    </main>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
-    <script src="scripts/plus_animation.js"></script>
-    <script src="scripts/dat.gui.min.js"></script>
-    <script src="scripts/smoke.js"></script>
-    <!-- <script src="scripts/mouse_trail.js"></script> -->
-    <!-- <script src="scripts/scrolling_videos.js"></script> -->
-</body>
-
+        <script src="scripts/custom_cursor.js"></script>
+        <!-- <script src="scripts/mouse_trail.js"></script> -->
+        <!-- <script src="scripts/scrolling_videos.js"></script> -->
+    </body>
 </html>

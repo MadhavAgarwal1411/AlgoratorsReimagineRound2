@@ -1,7 +1,9 @@
 /* #main{
     height: 1000vh;
 } */
-
+.hero{
+    position: relative;
+}
 #first{
     position: relative;
     z-index: 9;
