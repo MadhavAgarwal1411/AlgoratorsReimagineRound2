@@ -10,6 +10,7 @@ body,html{
     width: 100%;
     height: 100%;
     scroll-behavior: none;
+    overflow-x: hidden;
 }
 img{
     width: 100%;
@@ -26,31 +27,45 @@ h1{
     font-weight: 400;
     letter-spacing: -4px;
 }
-#section2{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    /* flex-direction: column; */
-    width: 400vw;
-}
+
 .horizontal{
     display: flex;
-    width: 400vw;
+    width: 200vw;
+    gap: 20vw;
 }
-#section2 h1{
-    font-size: 19rem;
-}
-#section2 .part1{
+.part1{
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.part1 h1{
+    font-size: 19rem;
+    text-align: center;
 }
 #section2 .part2{
+    position: relative;
     height: 100vh;
     width: 100vw;
 }
 #section2 .part3{
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 19rem;
+
+}
+#section2 .part3 h1{
+    font-size: 15rem;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .header-info{
     position: relative;

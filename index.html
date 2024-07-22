@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- <html lang="en" oncontextmenu="return false"> -->
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +12,7 @@
         <link rel="stylesheet" href="css/curved_borders.css" />
         <link rel="stylesheet" href="css/nav.css" />
         <link rel="stylesheet" href="css/slider.css" />
+        <link rel="stylesheet" href="css/slider2.css" />
         <!-- <link rel="stylesheet" href="css/mouse_trail.css"> -->
         <!-- <link rel="stylesheet" href="css/scrolling_videos.css"> -->
 
@@ -60,116 +62,7 @@
                 bottom: 27px;
             }
 
-            .icon {
-                font-family: "iconfont";
-                font-size: 130%;
-                float: right;
-            }
-
-            .twitter:before {
-                content: "a";
-            }
-
-            .github:before {
-                content: "b";
-            }
-
-            .app:before {
-                content: "c";
-            }
-
-            .discord:before {
-                content: "d";
-            }
-
-            .promo {
-                display: none;
-                /* display: table; */
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 1;
-                overflow: auto;
-                color: lightblue;
-                background-color: rgba(0, 0, 0, 0.4);
-                animation: promo-appear-animation 0.35s ease-out;
-            }
-
-            .promo-middle {
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .promo-content {
-                width: 80vw;
-                height: 80vh;
-                max-width: 80vh;
-                max-height: 80vw;
-                margin: auto;
-                padding: 0;
-                font-size: 2.8vmax;
-                font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-                text-align: center;
-                background-image: url("promo_back.png");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 15px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-
-            .promo-header {
-                height: 10%;
-                padding: 2px 16px;
-            }
-
-            .promo-close {
-                width: 10%;
-                height: 100%;
-                text-align: left;
-                float: left;
-                font-size: 1.3em;
-                /* transition: 0.2s; */
-            }
-
-            .promo-close:hover {
-                /* transform: scale(1.25); */
-                cursor: pointer;
-            }
-
-            .promo-body {
-                padding: 8px 16px 16px 16px;
-                margin: auto;
-            }
-
-            .promo-body p {
-                margin-top: 0;
-                mix-blend-mode: color-dodge;
-            }
-
-            .link {
-                width: 100%;
-                display: inline-block;
-            }
-
-            .link img {
-                width: 100%;
-            }
-
-            @keyframes promo-appear-animation {
-                0% {
-                    transform: scale(2);
-                    opacity: 0;
-                }
-                100% {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-            }
-            .dg.ac {
+     .dg.ac {
                 display: none;
             }
         </style>
@@ -187,26 +80,7 @@
     </head>
 
     <body>
-        <!-- <div class="wave-container"style="position: relative;">
-            <div class="wave">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-        </div> -->
         <div class="cursor"></div>
-
-        <!-- <div id="main">
-        <div id="page">
-            <canvas id="first"></canvas>
-        </div>
-        <div class="section"id="page1"></div>
-        <div class="section"id="page2"></div>
-        <div class="section"id="page3"></div>
-    </div> -->
         <main>
             <nav theme="light" class="nav-w">
                 <div class="nav-inner">
@@ -302,29 +176,15 @@
                         </div>
                     </section>
                     <section class="website-content">
-                        <!-- <div id="main">
-                        <div id="page">
-                            <canvas id="first"></canvas>
-
-                        </div>
-                        <div class="section"id="page1"></div>
-                        <div class="section"id="page2"></div>
-                        <div class="section"id="page3"></div>
-                    </div> -->
-
-                        <!-- <div class="section"id="page4"></div>
-                    <div class="section"id="page5"></div>
-                    <div class="section"id="page6"></div>
-                    <div class="section"id="page7"></div>
-                    <div class="section"id="page8"></div>
-                    <div class="section"id="page9"></div> -->
+                    <div class="part1">
+                        <h1 class="new quote">NEW ARRIVALS</h1>
+                    </div>
                         <section id="section2">
                             <canvas id="smoke-canvas"></canvas>
                             <div class="blur"></div>
+
                             <div class="horizontal">
-                                <div class="part1">
-                                    <h1 class="">NEW ARRIVALS</h1>
-                                </div>
+                                <div class="part2">
                                     <div class="page5">
                                         <div class="list">
                                             <div class="item">
@@ -369,116 +229,77 @@
                                             <button id="next">&gt;</button>
                                         </div>
                                     </div>
-                               
-                                <div class="part3">
-                                    <h1 class="">OUR BESTSELLERS</h1>
                                 </div>
-                                <div class="page5">
-                                    <div class="list">
-                                        <div class="item">
-                                            <img
-                                                src="assets/images/cosmic/image1.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="item">
-                                            <img
-                                                src="assets/images/cosmic/image2.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="item">
-                                            <img
-                                                src="assets/images/cosmic/image3.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="item">
-                                            <img
-                                                src="assets/images/cosmic/image4.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="item">
-                                            <img
-                                                src="assets/images/cosmic/image5.png"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="item">
-                                            <img
-                                                src="assets/images/cosmic/image6.png"
-                                                alt=""
-                                            />
-                                        </div>
+                                    <div class="part3">
+                                        <h1 class="quote">BESTSELLERS</h1>
                                     </div>
-                                    <div class="arrows">
-                                        <button id="prev">&lt;</button>
-                                        <button id="next">&gt;</button>
-                                    </div>
-                                </div>
+                               </div>
                             </div>
 
                         </section>
-                        <div class="extra_content" style="height: 100vh;"></div>
-
-                        <!-- <section class="section3">
-                        <div class="canvas-container">
-                        </div>
-
-
-                         <div class="container">
-                            <nav>
-                                <div class="log"><a href="#">goyj</a></div>
-                                <div class="info"><p>Lorem, ipsum.</p></div>
-                                <div class="about">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium enim suscipit aspernatur.</p>
+                        <div class="extra_content" style="height: 100vh;">
+                            <div class="page6">
+                                <div class="list">
+                                    <div class="item">
+                                        <img
+                                            src="assets/images/bestsellers/image1.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="item">
+                                        <img
+                                            src="assets/images/bestsellers/image2.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="item">
+                                        <img
+                                            src="assets/images/bestsellers/image3.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="item">
+                                        <img
+                                            src="assets/images/bestsellers/image4.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="item">
+                                        <img
+                                            src="assets/images/bestsellers/image5.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="item">
+                                        <img
+                                            src="assets/images/cosmic/image6.png"
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
-                            </nav>
-                            <div class="header">
-                                <img src="assets/images/new_arrivals/image1.png" alt="">
                             </div>
-                            <div class="hero-img">
-                                <img src="assets/images/new_arrivals/image5.png" alt="">
-                            </div>
-                            <div class="copy">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem maxime nam minus doloribus unde sapiente obcaecati, optio magnam possimus cupiditate!</p>
-                            </div>
-                            <div class="img">
-                                <img src="assets/images/new_arrivals/image2.png" alt="">
-                            </div>
-                            <div class="copy">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem maxime nam minus doloribus unde sapiente obcaecati, optio magnam possimus cupiditate!</p>
-                            </div>
-                            <div class="img">
-                                <img src="assets/images/new_arrivals/image3.png" alt="">
-                            </div>
-                            <div class="header">
-                               <img src="assets/images/new_arrivals/image4.png" alt="">
-                            </div>
-                        </div> -->
-
-                        <!-- <div class="container">
-                            <canvas></canvas>
-
-                            <div class="blur"></div>
-                        </div> -->
+                                <div class="arrows2">
+                                    <button id="prev2">&lt;</button>
+                                    <button id="next2">&gt;</button>
+                                </div>
+                        </div>
                     </section>
                 </div>
             </section>
-        </main>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
+
         <script type="module" src="scripts/model.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
         <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
         <script src="scripts/plus_animation.js"></script>
-        <script src="scripts/dat.gui.min.js"></script>
-        <script src="scripts/smoke.js"></script>
+ 
 
         <script src="scripts/custom_cursor.js"></script>
         <script src="scripts/script.js"></script>
         <script src="scripts/slider.js"></script>
+        <script src="scripts/slider2.js"></script>
+        <script src="scripts/dat.gui.min.js"></script>
+        <script src="scripts/smoke.js"></script>
         <!-- <script src="scripts/mouse_trail.js"></script> -->
         <!-- <script src="scripts/scrolling_videos.js"></script> -->
     </body>
