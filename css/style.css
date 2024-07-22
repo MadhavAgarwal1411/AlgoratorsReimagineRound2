@@ -52,7 +52,7 @@ img{
 }
 h1{
     text-transform: uppercase;
-    font-size: 200px;
+    font-size: 10vw;
     font-weight: 400;
     letter-spacing: -4px;
 }
@@ -161,4 +161,153 @@ h1{
     font-size: 1.5rem;
     cursor: pointer;
 }
+.about_us_image{
+    object-fit: inherit;
+}
+@media screen and (max-width:600px) {
+    .page5 .list .hidden{
+        display: none !important;
+    }
+}
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+.page10 footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page10 footer .logo img{
+    width: 273px;
+}
+.page10 footer .logo{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.page10 footer .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.page10 footer .container .sec h2{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    margin-bottom:15px ;
+}
+
+.page10 footer .container .sec  p{
+    color: white;
+}
+.page10 .sci{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    gap: 10px;
+}
+.page10 .sci li{
+    list-style: none;
+}
+
+.page10 .sci li a{
+    display:inline-block;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.page10 .sci li a:hover{
+    background-color: #84878632;
+    border: 2px solid #84878632;
+    border-radius: 50%;
+}
+
+.page10 .sci li a svg{
+    color: white;
+}
+.page10 .quicklinks{
+    position: relative;
+}
+.page10 .quicklinks li{
+    list-style: none;
+}
+
+.page10 .quicklinks li a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.page10 .quicklinks li a:hover{
+    text-decoration: underline;
+}
+.page10 .info{
+    position: relative;
+}
+.page10 .info li{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+.page10 .info li span:nth-child(1){
+    color: white;
+}
+.page10 .info li span{
+    color: white;
+}
+.page10 .info a{
+    color: white;
+    text-decoration: none;
+}
+.page10 .info a:hover{
+    text-decoration: underline;
+}
+
+.page10 .copyrightText{
+    width: 100%;
+    padding: 8px 100px;
+    background-color: black;
+    text-align:left;
+    color: white;
+}
+
+@media (max-width:991px) {
+    .page10 footer{
+        padding: 40px;
+    }
+    .page10 footer .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .page10 .copyrightText{
+        padding: 8px 40px;
+    }
+}
+
+@media (max-width:768px){
+    .page10 footer .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.page10 .copyrightText a{
+    color: white;
+    text-decoration: none;
+}
+.page10 .copyrightText a:hover{
+    text-decoration: underline;
+}
