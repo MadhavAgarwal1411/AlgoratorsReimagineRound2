@@ -10,7 +10,36 @@ body,html{
     width: 100%;
     height: 100%;
     scroll-behavior: none;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+}
+
+.text-link {
+    pointer-events: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: -1rem;
+    padding: 1rem;
+    font-size: 0.8125rem;
+    line-height: 0.8;
+    position: relative;
+}
+.text-link::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 2rem);
+    transform: scaleX(0);
+    height: 2px;
+    bottom: calc(1rem - 12px);
+    left: 1rem;
+    background-color: currentColor;
+    transform-origin: center left;
+    transition: transform 0.4s cubic-bezier(0.51, 0, 0.08, 1);
+}
+@media (hover: hover) {
+    .text-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: center right;
+    }
 }
 img{
     width: 100%;
@@ -83,3 +112,53 @@ h1{
     width: 100%;
     height: 100%;
 }
+
+
+.about_us .displacement{
+    filter: url(#displacementFilter);
+}
+
+.about_us svg{
+    width: 100%;
+    height: 100vh;
+}
+.about_us{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    background-color: black;
+    color: white;
+}
+.about_us .part2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+@media screen and(max-width:800px) {
+    .about_us .part2{
+        height: 200vh;
+    }
+}
+.about_us .part2 .aboutus_0{
+    margin-bottom: 1.5em;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.about_us .part2 .aboutus_1{
+    font-size: 1.5rem;
+    color: rgb(161, 165, 169);
+}
+.about_us .part2 .aboutus_2{
+    font-size: 2rem;
+}
+.about_us .part2 .aboutus_3{
+    font-size: 2.2rem;
+}
+.about_us .part2 .aboutus_4{
+    margin-top: 2em;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+

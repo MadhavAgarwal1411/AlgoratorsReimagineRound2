@@ -1,305 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- <html lang="en" oncontextmenu="return false"> -->
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Louis Moinet</title>
-        <link rel="stylesheet" href="css/plus_animation.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/smoke.css" />
-        <link rel="stylesheet" href="css/custom_cursor.css" />
-        <link rel="stylesheet" href="css/curved_borders.css" />
-        <link rel="stylesheet" href="css/nav.css" />
-        <link rel="stylesheet" href="css/slider.css" />
-        <link rel="stylesheet" href="css/slider2.css" />
-        <!-- <link rel="stylesheet" href="css/mouse_trail.css"> -->
-        <!-- <link rel="stylesheet" href="css/scrolling_videos.css"> -->
 
-        <style>
-            @font-face {
-                font-family: "iconfont";
-                src: url("iconfont.ttf") format("truetype");
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louis Moinet</title>
+    <link rel="stylesheet" href="css/plus_animation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/smoke.css" />
+    <link rel="stylesheet" href="css/custom_cursor.css" />
+    <link rel="stylesheet" href="css/curved_borders.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/slider2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/mouse_trail.css"> -->
+    <!-- <link rel="stylesheet" href="css/scrolling_videos.css"> -->
 
-            /* canvas {
+    <style>
+        @font-face {
+            font-family: "iconfont";
+            src: url("iconfont.ttf") format("truetype");
+        }
+
+        /* canvas {
                 position: absolute;
                 width: 100%;
                 height: 100%;
             } */
-            #section2 canvas {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-            }
-            .dg {
-                opacity: 0.9;
-            }
+        #section2 canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
 
-            .dg .property-name {
-                overflow: visible;
-            }
+        .dg {
+            opacity: 0.9;
+        }
 
-            .bigFont {
-                font-size: 150%;
-                color: #8c8c8c;
-            }
+        .dg .property-name {
+            overflow: visible;
+        }
 
-            .cr.function.appBigFont {
-                font-size: 150%;
-                line-height: 27px;
-                color: #a5f8d3;
-                background-color: #023c40;
-            }
+        .bigFont {
+            font-size: 150%;
+            color: #8c8c8c;
+        }
 
-            .cr.function.appBigFont .property-name {
-                float: none;
-            }
+        .cr.function.appBigFont {
+            font-size: 150%;
+            line-height: 27px;
+            color: #a5f8d3;
+            background-color: #023c40;
+        }
 
-            .cr.function.appBigFont .icon {
-                position: sticky;
-                bottom: 27px;
-            }
+        .cr.function.appBigFont .property-name {
+            float: none;
+        }
 
-     .dg.ac {
-                display: none;
-            }
-        </style>
+        .cr.function.appBigFont .icon {
+            position: sticky;
+            bottom: 27px;
+        }
 
-        <script>
-            window.ga =
-                window.ga ||
-                function () {
-                    (ga.q = ga.q || []).push(arguments);
-                };
-            ga.l = +new Date();
-            ga("create", "UA-105392568-1", "auto");
-            ga("send", "pageview");
-        </script>
-    </head>
+        .dg.ac {
+            display: none;
+        }
+    </style>
 
-    <body>
-        <div class="cursor"></div>
-        <main>
-            <nav theme="light" class="nav-w">
-                <div class="nav-inner">
-                    <a data-nav-item="" href="#" class="text-link">Yesterday</a>
-                    <a href="#" data-nav-item="" class="text-link">Today</a>
-                    <a href="#" data-nav-item="" class="text-link">Tomorrow</a>
-                    <a href="#" data-nav-item="" class="text-link">
-                        <img src="assets/images/logo.png" alt="" />
-                    </a>
-                    <a href="#" data-nav-item="" class="text-link"
-                        >COSMIC ART</a
-                    >
-                    <a data-nav-item="" href="#" class="text-link"
-                        >MECHANICAL WONDERS</a
-                    >
-                    <a data-nav-item="" href="#" class="text-link">BESPOKE</a>
-                </div>
-            </nav>
-            <section class="section" id="section1">
-                <div class="container legend">
-                    <section class="hero">
-                        <video
-                            width="100%"
-                            height="100%"
-                            loop=""
-                            controlslist="nodownload nofullscreen noremoteplayback"
-                            id="hero-vid"
-                            autoplay="true"
-                            playsinline="true"
-                            muted=""
-                            poster="assets/images/hero_image.jpg"
-                            class="hero-video cover interactable"
-                        >
-                            <source
-                                src="assets/videos/hero_video.mp4"
-                                type="video/mp4"
-                            />
-                        </video>
-                        <h1 style="bottom: 2em">ROYAL</h1>
-                    </section>
-                    <div id="container3D"></div>
+    <script>
+        window.ga =
+            window.ga ||
+            function () {
+                (ga.q = ga.q || []).push(arguments);
+            };
+        ga.l = +new Date();
+        ga("create", "UA-105392568-1", "auto");
+        ga("send", "pageview");
+    </script>
+</head>
 
-                    <section class="info">
-                        <div class="header-rows">
-                            <div class="header-row">
-                                <h1>LOUIS</h1>
-                            </div>
-                            <div class="header-row">
-                                <h1>MOINET</h1>
-                            </div>
+<body>
+    <div class="cursor"></div>
+    <main>
+        <nav theme="light" class="nav-w">
+            <div class="nav-inner">
+                <a data-nav-item="" href="#" class="text-link">Yesterday</a>
+                <a href="#" data-nav-item="" class="text-link">Today</a>
+                <a href="#" data-nav-item="" class="text-link">Tomorrow</a>
+                <a href="#" data-nav-item="" class="text-link">
+                    <img src="assets/images/logo.png" alt="" />
+                </a>
+                <a href="#" data-nav-item="" class="text-link">COSMIC ART</a>
+                <a data-nav-item="" href="#" class="text-link">MECHANICAL WONDERS</a>
+                <a data-nav-item="" href="#" class="text-link">BESPOKE</a>
+            </div>
+        </nav>
+        <section class="section" id="section1">
+            <div class="container legend">
+                <section class="hero">
+                    <video width="100%" height="100%" loop="" controlslist="nodownload nofullscreen noremoteplayback"
+                        id="hero-vid" autoplay="true" playsinline="true" muted="" poster="assets/images/hero_image.jpg"
+                        class="hero-video cover interactable">
+                        <source src="assets/videos/hero_video.mp4" type="video/mp4" />
+                    </video>
+                    <h1 style="bottom: 2em">ROYAL</h1>
+                </section>
+                <div id="container3D"></div>
+
+                <section class="info">
+                    <div class="header-rows">
+                        <div class="header-row">
+                            <h1>LOUIS</h1>
                         </div>
-                    </section>
-                    <section class="header-info">
-                        <h1>COSMIC ART</h1>
-                        <div class="header-images">
-                            <div class="img interactable">
-                                <img
-                                    src="assets/images/cosmic/image1.png"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="img interactable">
-                                <img
-                                    src="assets/images/cosmic/image2.png"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="img interactable">
-                                <img
-                                    src="assets/images/cosmic/image3.png"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="img interactable">
-                                <img
-                                    src="assets/images/cosmic/image4.png"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="img interactable">
-                                <img
-                                    src="assets/images/cosmic/image5.png"
-                                    alt=""
-                                />
-                            </div>
+                        <div class="header-row">
+                            <h1>MOINET</h1>
                         </div>
-                    </section>
-                    <section class="whitespaces"></section>
-                    <section class="pinned">
-                        <div class="revealer">
-                            <div class="revealer-1"></div>
-                            <div class="revealer-2"></div>
+                    </div>
+                </section>
+                <section class="header-info">
+                    <h1>COSMIC ART</h1>
+                    <div class="header-images">
+                        <div class="img interactable">
+                            <img src="assets/images/cosmic/image1.png" alt="" />
                         </div>
-                    </section>
-                    <section class="website-content">
+                        <div class="img interactable">
+                            <img src="assets/images/cosmic/image2.png" alt="" />
+                        </div>
+                        <div class="img interactable">
+                            <img src="assets/images/cosmic/image3.png" alt="" />
+                        </div>
+                        <div class="img interactable">
+                            <img src="assets/images/cosmic/image4.png" alt="" />
+                        </div>
+                        <div class="img interactable">
+                            <img src="assets/images/cosmic/image5.png" alt="" />
+                        </div>
+                    </div>
+                </section>
+                <section class="whitespaces"></section>
+                <section class="pinned">
+                    <div class="revealer">
+                        <div class="revealer-1"></div>
+                        <div class="revealer-2"></div>
+                    </div>
+                </section>
+                <section class="website-content">
                     <div class="part1">
                         <h1 class="new quote">NEW ARRIVALS</h1>
                     </div>
-                        <section id="section2">
-                            <canvas id="smoke-canvas"></canvas>
-                            <div class="blur"></div>
+                    <section id="section2">
+                        <canvas id="smoke-canvas"></canvas>
+                        <div class="blur"></div>
 
-                            <div class="horizontal">
-                                <div class="part2">
-                                    <div class="page5">
-                                        <div class="list">
-                                            <div class="item">
-                                                <img
-                                                    src="assets/images/cosmic/image1.png"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <div class="item">
-                                                <img
-                                                    src="assets/images/cosmic/image2.png"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <div class="item">
-                                                <img
-                                                    src="assets/images/cosmic/image3.png"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <div class="item">
-                                                <img
-                                                    src="assets/images/cosmic/image4.png"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <div class="item">
-                                                <img
-                                                    src="assets/images/cosmic/image5.png"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <div class="item">
-                                                <img
-                                                    src="assets/images/cosmic/image6.png"
-                                                    alt=""
-                                                />
-                                            </div>
+                        <div class="horizontal">
+                            <div class="part2">
+                                <div class="page5">
+                                    <div class="list">
+                                        <div class="item">
+                                            <img src="assets/images/cosmic/image1.png" alt="" />
                                         </div>
-                                        <div class="arrows">
-                                            <button id="prev">&lt;</button>
-                                            <button id="next">&gt;</button>
+                                        <div class="item">
+                                            <img src="assets/images/cosmic/image2.png" alt="" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="assets/images/cosmic/image3.png" alt="" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="assets/images/cosmic/image4.png" alt="" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="assets/images/cosmic/image5.png" alt="" />
+                                        </div>
+                                        <div class="item">
+                                            <img src="assets/images/cosmic/image6.png" alt="" />
                                         </div>
                                     </div>
-                                </div>
-                                    <div class="part3">
-                                        <h1 class="quote">BESTSELLERS</h1>
-                                    </div>
-                               </div>
-                            </div>
-
-                        </section>
-                        <div class="extra_content" style="height: 100vh;">
-                            <div class="page6">
-                                <div class="list">
-                                    <div class="item">
-                                        <img
-                                            src="assets/images/bestsellers/image1.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="item">
-                                        <img
-                                            src="assets/images/bestsellers/image2.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="item">
-                                        <img
-                                            src="assets/images/bestsellers/image3.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="item">
-                                        <img
-                                            src="assets/images/bestsellers/image4.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="item">
-                                        <img
-                                            src="assets/images/bestsellers/image5.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="item">
-                                        <img
-                                            src="assets/images/cosmic/image6.png"
-                                            alt=""
-                                        />
+                                    <div class="arrows">
+                                        <button id="prev">&lt;</button>
+                                        <button id="next">&gt;</button>
                                     </div>
                                 </div>
                             </div>
-                                <div class="arrows2">
-                                    <button id="prev2">&lt;</button>
-                                    <button id="next2">&gt;</button>
-                                </div>
+                            <div class="part3">
+                                <h1 class="quote">BESTSELLERS</h1>
+                            </div>
                         </div>
-                    </section>
+            </div>
+
+        </section>
+
+        <div class="extra_content">
+            <div class="page6">
+                <div class="list">
+                    <div class="item">
+                        <img src="assets/images/bestsellers/image1.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/bestsellers/image2.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/bestsellers/image3.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/bestsellers/image4.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/bestsellers/image5.png" alt="" />
+                    </div>
+                    <div class="item">
+                        <img src="assets/images/cosmic/image6.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <button id="prev2">&lt;</button>
+                <button id="next2">&gt;</button>
+            </div>
+            <section class="about_us">
+                <svg viewBox="0 0 1728 852" fill="none" preserveAspectRatio="xMidYMin slice">
+                    <defs>
+                        <filter id="displacementFilter">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="10" result="noise" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R"
+                                yChannelSelector="G" />
+                        </filter>
+                        <mask id="circleMask">
+                            <circle cx="600" cy="800" r="0" fill="white" class="displacement" />
+                        </mask>
+                    </defs>
+                    <image xlink:href="assets/images/new_arrivals/image1.png" width="100%" height="100%"
+                        mask="url(#circleMask)">
+                </svg>
+                <div class="part2">
+                    <div class="aboutus_0">
+                        AboutUs
+                    </div>
+                    <div class="aboutus_1">
+                        Louis Moinet is today an independent watch brand located in Saint-Blaise, Switzerland,
+                        specialising in the creation of high-end timepieces, often featuring exotic materials and
+                        innovative technology, underpinned by the philosophy of limited edition mechanical art.
+                    </div>
+                    <div class="aboutus_2">
+                        All of Louis Moinet’s timepieces are either exclusive limited editions or unique pieces.
+                    </div>
+                    <div class="aboutus_3">
+                        Uniqueness, Creative Horology, Exclusivity and Art & Design are at the heart of Louis Moinet
+                        creations.
+                    </div>
+                    <div class="aboutus_4 text-link">
+                        <a href="#">
+                            Read More
+                        </a>
+                    </div>
                 </div>
             </section>
+        </div>
+        </section>
+        </div>
+        </section>
+    </main>
+    <script type="module" src="scripts/model.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="scripts/plus_animation.js"></script>
+    <script src="scripts/custom_cursor.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/slider2.js"></script>
+    <script src="scripts/dat.gui.min.js"></script>
+    <script src="scripts/smoke.js"></script>
+    <script>
+        let tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".about_us",
+                start: "top top",
+                end: "bottom top",
+                scrub: false,
+                pin: true,
+                toggleActions: 'play none none reverse'
+            }
 
-        <script type="module" src="scripts/model.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-        <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
-        <script src="scripts/plus_animation.js"></script>
- 
+        })
+        tl2.to('.displacement', {
+            attr: {
+                r: 700
+            },
+            duration: 2
+        })
 
-        <script src="scripts/custom_cursor.js"></script>
-        <script src="scripts/script.js"></script>
-        <script src="scripts/slider.js"></script>
-        <script src="scripts/slider2.js"></script>
-        <script src="scripts/dat.gui.min.js"></script>
-        <script src="scripts/smoke.js"></script>
-        <!-- <script src="scripts/mouse_trail.js"></script> -->
-        <!-- <script src="scripts/scrolling_videos.js"></script> -->
-    </body>
+    </script>
+</body>
+
 </html>
