@@ -53,13 +53,17 @@ document.getElementById("container3D").appendChild(renderer.domElement);
 
 //Set how far the camera will be from the 3D model
 // camera.position.z = objToRender === "watch" ? 7 : 500;
-camera.position.z = objToRender === "watch" ? 10 : 10;
-camera.position.y = objToRender === "watch" ? 0 : 30;
-camera.position.x = objToRender === "watch" ? 0 : 150;
+// camera.position.z = objToRender === "watch" ? 2 : 10;
+// camera.position.y = objToRender === "watch" ? -5 : 30;
+// camera.position.x = objToRender === "watch" ? -6 : 150;
+
+camera.position.set( -6, 3, 2 );
+
+camera.lookAt( 0,0,0 );
 
 //Add lights to the scene, so we can actually see the 3D model
 const topLight = new THREE.DirectionalLight(0xffffff, 1); // (color, intensity)
-topLight.position.set(50, 50, 50) //top-left-ish
+topLight.position.set(15, 15, 50) //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
@@ -70,17 +74,21 @@ scene.add(ambientLight);
 if (objToRender === "dino") {
   controls = new OrbitControls(camera, renderer.domElement);
 }
-
+// object.rotation.y = 1;
+// object.rotation.x = 0;
 //Render the scene
 function animate() {
   requestAnimationFrame(animate);
   //Here we could add some code to update the scene, adding some automatic movement
 
   //Make the watch move
+
+
+
   if (object && objToRender === "watch") {
     //I've played with the constants here until it looked good 
-    object.rotation.y = -3 + mouseX / window.innerWidth * 9;
-    object.rotation.x = -1.2 + mouseY * 7.5 / window.innerHeight;
+    object.rotation.y = -3 + mouseX / window.innerWidth * 3;
+    object.rotation.x = -1.2 + mouseY * 3 / window.innerHeight;
   }
   renderer.render(scene, camera);
 }
@@ -93,7 +101,7 @@ window.addEventListener("resize", function () {
 });
 
 //add mouse position listener, so we can make the watch move
-document.onmousemove = (e) => {
+document.getElementById("container3D").onmousemove = (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
 }
