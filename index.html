@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="css/mouse_trail.css"> -->
     <!-- <link rel="stylesheet" href="css/scrolling_videos.css"> -->
 
@@ -89,7 +92,7 @@
         <div class="cursor-dot" data-cursor-dot></div>
     </div>
     <main>
-        <nav theme="light" class="nav-w">
+        <!-- <nav theme="light" class="nav-w">
             <div class="nav-inner">
                 <a data-nav-item="" href="#" class="text-link">Yesterday</a>
                 <a href="#" data-nav-item="" class="text-link">Today</a>
@@ -101,7 +104,33 @@
                 <a data-nav-item="" href="#" class="text-link">MECHANICAL WONDERS</a>
                 <a data-nav-item="" href="#" class="text-link">BESPOKE</a>
             </div>
-        </nav>
+        </nav> -->
+        <div class="page0">
+            <header>
+                <div class="navbar">
+                        <a href="#"><img width="90px" src="assets/images/logo.png" alt="" /></a>
+                    <ul class="links">
+                        <li><a class="text-link" href="#">Yesterday</a></li>
+                        <li><a class="text-link" href="#">Today</a></li>
+                        <li><a class="text-link" href="#">Tomorrow</a></li>
+                        <li><a class="text-link" href="#">COSMIC ART</a></li>
+                        <li><a class="text-link" href="#">MECHANICAL WONDERS</a></li>
+                        <li><a class="text-link" href="#">BESPOKE</a></li>
+                    </ul>
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <div class="dropmenu">
+                    <li><a href="#">Yesterday</a></li>
+                        <li><a class="text-link" href="#">Today</a></li>
+                        <li><a class="text-link" href="#">Tomorrow</a></li>
+                        <li><a class="text-link" href="#">COSMIC ART</a></li>
+                        <li><a class="text-link" href="#">MECHANICAL WONDERS</a></li>
+                        <li><a class="text-link" href="#">BESPOKE</a></li>
+                </div>
+            </header>
+        </div>
         <section class="section">
             <div class="container legend">
                 <section class="hero">
@@ -274,12 +303,11 @@
                         <div class="sec aboutus">
                             <h2>ABOUT LOUIS MOINET</h2>
                             <p>
-                                Louis Moinet specialises in the creation of high-end timepieces, featuring exotic material,
-                                such as lunar or Martian meteorites, or fossilised palm tree.
+                                Louis Moinet specialises in the creation of high-end timepieces, featuring exotic material, such as lunar or Martian meteorites, or fossilised palm tree.
                             </p>
                             <ul class="sci">
                                 <li>
-                                    <a target="_blank" href="https://www.facebook.com/Firstbudorganics/"><svg
+                                    <a target="_blank" href="https://www.facebook.com/LouisMoinet/"><svg
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                                             color="#000000" fill="none">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -288,7 +316,7 @@
                                         </svg></a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="https://www.instagram.com/firstbudorganics/"><svg
+                                    <a target="_blank" href="https://www.instagram.com/louismoinet/"><svg
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                                             color="#000000" fill="none">
                                             <path
@@ -302,22 +330,14 @@
                                         </svg></a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="https://www.linkedin.com/company/first-bud-organics/"><svg
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-                                            color="#ffffff" fill="none">
-                                            <path
-                                                d="M4.5 9.5H4C3.05719 9.5 2.58579 9.5 2.29289 9.79289C2 10.0858 2 10.5572 2 11.5V20C2 20.9428 2 21.4142 2.29289 21.7071C2.58579 22 3.05719 22 4 22H4.5C5.44281 22 5.91421 22 6.20711 21.7071C6.5 21.4142 6.5 20.9428 6.5 20V11.5C6.5 10.5572 6.5 10.0858 6.20711 9.79289C5.91421 9.5 5.44281 9.5 4.5 9.5Z"
-                                                stroke="currentColor" stroke-width="1.5" />
-                                            <path
-                                                d="M6.5 4.25C6.5 5.49264 5.49264 6.5 4.25 6.5C3.00736 6.5 2 5.49264 2 4.25C2 3.00736 3.00736 2 4.25 2C5.49264 2 6.5 3.00736 6.5 4.25Z"
-                                                stroke="currentColor" stroke-width="1.5" />
-                                            <path
-                                                d="M12.326 9.5H11.5C10.5572 9.5 10.0858 9.5 9.79289 9.79289C9.5 10.0858 9.5 10.5572 9.5 11.5V20C9.5 20.9428 9.5 21.4142 9.79289 21.7071C10.0858 22 10.5572 22 11.5 22H12C12.9428 22 13.4142 22 13.7071 21.7071C14 21.4142 14 20.9428 14 20L14.0001 16.5001C14.0001 14.8433 14.5281 13.5001 16.0879 13.5001C16.8677 13.5001 17.5 14.1717 17.5 15.0001V19.5001C17.5 20.4429 17.5 20.9143 17.7929 21.2072C18.0857 21.5001 18.5572 21.5001 19.5 21.5001H19.9987C20.9413 21.5001 21.4126 21.5001 21.7055 21.2073C21.9984 20.9145 21.9985 20.4432 21.9987 19.5006L22.0001 14.0002C22.0001 11.515 19.6364 9.50024 17.2968 9.50024C15.9649 9.50024 14.7767 10.1531 14.0001 11.174C14 10.5439 14 10.2289 13.8632 9.995C13.7765 9.84686 13.6531 9.72353 13.505 9.63687C13.2711 9.5 12.9561 9.5 12.326 9.5Z"
-                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                        </svg></a>
+                                    <a target="_blank" href="https://x.com/louismoinet">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                                            <path d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a target="_blank" href="https://www.youtube.com/channel/UCMORt8VNt1223yUeJyE_I_A"><svg
+                                    <a target="_blank" href="https://www.youtube.com/user/louismoinet1806"><svg
                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                                             color="#000000" fill="none">
                                             <path
@@ -331,35 +351,31 @@
                             </ul>
                         </div>
                         <div class="sec quicklinks">
-                            <h2>Shop</h2>
+                            <h2>RETAILERS</h2>
                             <ul>
-                                <li><a href="">Herbal Teas</a></li>
-                                <li><a href="">Homemade Pickles</a></li>
-                                <li><a href="">Honey</a></li>
-                                <li><a href="">Immunity Drops</a></li>
-                                <li><a href="">Spices</a></li>
-                                <li><a href="">Sugar Substitute</a></li>
+                                <li><a class=" text-link" href="">
+                                    AMERICAS</a></li>
+                                <li><a class=" text-link" href="">ASIA AND OCEANIA</a></li>
+                                <li><a class=" text-link" href="">EUROPE</a></li>
+                                <li><a class=" text-link" href="">MIDDLE-EAST AND AFRICA</a></li>
+                                <li><a class=" text-link" href="">INDIA</a></li>
+                                <li><a class=" text-link" href="">SAUDI ARABIA</a></li>
                             </ul>
                         </div>
-    
+        
                         <div class="sec quicklinks">
                             <h2>Policies</h2>
                             <p>
-                                LES ATELIERS LOUIS MOINET takes particular care to protect your personal data and does
-                                everything possible to respect this right. Personal data refers to any information about
-                                individuals making it possible to identify them. It does not include anonymous data. Les
-                                Ateliers Louis Moinet SA is responsible for the processing of personal data collected
-                                through this website. In this privacy policy, the terms “Ateliers Louis Moinet”, “we”, “us”
-                                or “our” refer to:
+                                LES ATELIERS LOUIS MOINET takes particular care to protect your personal data and does everything possible to respect this right. Personal data refers to any information about individuals making it possible to identify them. It does not include anonymous data. Les Ateliers Louis Moinet SA is responsible for the processing of personal data collected through this website. In this privacy policy, the terms “Ateliers Louis Moinet”, “we”, “us” or “our” refer to:
                             </p>
                         </div>
                     </div>
                 </footer>
                 <div class="copyrightText">
-                    © 2024
-                    <a href="">LES ATELIERS LOUIS MOINET</a>
+                    © 2024 
+                    <a class="text-link" href="">LES ATELIERS LOUIS MOINET</a>
                     RUE DU TEMPLE 1 - 2072 ST BLAISE - SWITZERLAND <br />
-                    <a href="">+41 32 753 68 14</a>
+                    <a class="text-link" href="">+41 32 753 68 14</a>
                 </div>
             </div>
         </div>
@@ -395,6 +411,19 @@
             duration: 2
         })
 
+    </script>
+    <script>
+        const toggleBtn = document.querySelector(".toggle_btn");
+        const toggleBtnIcon = document.querySelector(".toggle_btn i");
+        const dropDown = document.querySelector(".dropmenu");
+
+        toggleBtn.onclick = function () {
+            dropDown.classList.toggle("open");
+            const isOpen = dropDown.classList.contains("open");
+            toggleBtnIcon.classList = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars";
+        };
     </script>
 </body>
 

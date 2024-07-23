@@ -15,6 +15,105 @@ body,html{
     cursor: none;
 }
 
+.page0{
+    width: 100%;
+}
+
+.page0 header li{
+    list-style: none;
+}
+
+.page0 header a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+.page0 header{
+    position: relative;
+    padding: 15px 2rem;
+}
+
+.page0 header .navbar{
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page0 header .navbar img{
+    width: 50%;
+    margin-top: 7%;
+}
+.page0 header .navbar a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.page0 header .navbar .links{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-around;
+    gap: 2px;
+}
+
+.page0 header .navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.page0 header .dropmenu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: #0000009a;
+    backdrop-filter: blur(15px);
+    border-radius: 10px 10px 10px 50%;
+    overflow: hidden;
+    transition: height 0.2s ease;
+}
+
+.page0 header .dropmenu.open{
+    height: 90vh;
+}
+
+.page0 header .dropmenu li{
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:992px){
+    .page0 header .navbar .links,
+    .page0 header .navbar .action-btn{
+        display: none;
+    }
+    .page0 header .navbar .toggle_btn{
+        display: block;
+    }
+    .page0 header .dropmenu{
+        display: block;
+    }
+}
+
+@media(max-width:576px){
+    .page0 header .dropmenu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
 .text-link {
     pointer-events: auto;
     text-transform: uppercase;
@@ -166,11 +265,13 @@ h1{
     object-fit: inherit;
 }
 @media screen and (max-width:600px) {
-    .page5 .list .hidden{
-        display: none !important;
+    .header-info .header-images .hidden{
+        display: none;
+    }
+    .header-info .header-images{
+        gap: 15%;
     }
 }
-
 .page10 footer{
     position: relative;
     width: 100%;
@@ -192,7 +293,7 @@ h1{
 .page10 footer .container{
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 20px;
 }
 .page10 footer .container .sec h2{
@@ -247,9 +348,6 @@ h1{
     margin-bottom: 10px;
     display: inline-block;
 }
-.page10 .quicklinks li a:hover{
-    text-decoration: underline;
-}
 .page10 .info{
     position: relative;
 }
@@ -268,10 +366,6 @@ h1{
     color: white;
     text-decoration: none;
 }
-.page10 .info a:hover{
-    text-decoration: underline;
-}
-
 .page10 .copyrightText{
     width: 100%;
     padding: 8px 100px;
@@ -300,7 +394,4 @@ h1{
 .page10 .copyrightText a{
     color: white;
     text-decoration: none;
-}
-.page10 .copyrightText a:hover{
-    text-decoration: underline;
 }
