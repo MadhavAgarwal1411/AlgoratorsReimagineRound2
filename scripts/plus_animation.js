@@ -40,7 +40,7 @@ ScrollTrigger.create({
     trigger: ".pinned",
     start: "top top",
     endTrigger: ".header-info",
-    end: "bottom bottom",
+    end: "top -100%",
     onUpdate: (self) => {
         const progress = self.progress;
         const clipPath = `polygon(
