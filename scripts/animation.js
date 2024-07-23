@@ -11,6 +11,19 @@ tl.to("#section2 .horizontal", {
       pin: true,
     }
   })
+gsap.from(".aboutus-content"),{
+  y: 120,
+  stagger: 0.2,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".about_us",
+    scroller: "main",
+    start: "top 45%",
+    end: "top 37%",
+    markers: true,
+    scrub: 2,
+  }
+}
   // tl.to("#section2 .horizontal2", {
   //   transform: "translateX(-90%)",
   //   scrollTrigger: {

@@ -1,7 +1,7 @@
 
 @media(hover: hover){
-    .cursor{
-        background-color: white !important;
+    /* .cursor{
+        background-color: rgb(212, 53, 53) !important;
         width: 20px !important;
         height: 20px !important;
         border-radius: 50% !important;
@@ -9,7 +9,83 @@
         mix-blend-mode: difference !important;
         transition: all ease 0.1s !important;
         z-index: 99999 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }*/
+    /* .cursor{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 9999999;
+
+    } */
+    .cursor .cursor-dot{
+        width: 5px;
+        height: 5px;
+        background-color: white;
+
     }
+     .cursor-outline{
+        width: 30px;
+        height: 30px; 
+        border: 2px solid hsla(0, 0%, 100%, 0.5);
+        background-color: transparent;
+        transition-duration: 200ms;
+
+        transition-timing-function: ease-out;
+        animation: cursorAnim 1s infinite alternate;
+
+     }
+     .cursor-outline, .cursor-dot{
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999999;
+        pointer-events: none;
+
+
+     }
+     .cursor-outline::after{
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px; 
+        border-radius: 50%;
+        opacity: .5;
+        border: 8px solid gray;
+        top: -8px;
+        left: -8px;
+        /* transition-timing-function: ease-out; */
+        /* animation: cursorAnim .5s infinite alternate; */
+        animation: cursorAnim2 1s infinite alternate;
+
+     }
+     @keyframes cursorAnim {
+        0%{
+            transform: scale(1);
+        }
+
+        50%{
+            transform: scale(.7);
+        }
+        100%{
+            transform: scale(1);
+        }
+     }
+     @keyframes cursorAnim2 {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(.4);
+        }
+        100%{
+            transform: scale(1);
+        }
+     }
 }
 /* .interactable:hover{
     background-size: 105%!important;

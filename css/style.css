@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none!important;
 }
 *::-webkit-scrollbar{
     display: none;
@@ -11,12 +12,12 @@ body,html{
     height: 100%;
     scroll-behavior: none;
     overflow-x: hidden !important;
+    cursor: none;
 }
 
 .text-link {
     pointer-events: auto;
     text-transform: uppercase;
-    cursor: pointer;
     margin: -1rem;
     padding: 1rem;
     font-size: 0.8125rem;
@@ -168,14 +169,6 @@ h1{
     .page5 .list .hidden{
         display: none !important;
     }
-}
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: none;
 }
 
 .page10 footer{
