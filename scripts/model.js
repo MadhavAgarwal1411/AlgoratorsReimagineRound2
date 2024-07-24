@@ -57,12 +57,12 @@ document.getElementById("container3D").appendChild(renderer.domElement);
 // camera.position.y = objToRender === "watch" ? -5 : 30;
 // camera.position.x = objToRender === "watch" ? -6 : 150;
 
-camera.position.set( -6, 3, 2 );
+camera.position.set( -9, 3, 2 );
 
 camera.lookAt( 0,0,0 );
 
 //Add lights to the scene, so we can actually see the 3D model
-const topLight = new THREE.DirectionalLight(0xffffff, 1); // (color, intensity)
+const topLight = new THREE.DirectionalLight(0xffff36, 1); // (color, intensity)
 topLight.position.set(15, 15, 50) //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);

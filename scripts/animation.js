@@ -1,6 +1,6 @@
-const tl = gsap.timeline();
+const tl3 = gsap.timeline();
 
-tl.to("#section2 .horizontal", {
+tl3.to("#section2 .horizontal", {
     transform: "translateX(-70%)",
     scrollTrigger: {
       trigger: '#section2',
@@ -11,20 +11,25 @@ tl.to("#section2 .horizontal", {
       pin: true,
     }
   })
-gsap.from(".aboutus-content"),
-  {
+// gsap.from(".aboutus-content"),
+//   {
+//   y: 120,
+//   stagger: 0.2,
+//   duration: 1,
+//   scrollTrigger: {
+//     trigger: ".about_us",
+//     scroller: "main",
+//     start: "top 45%",
+//     end: "top 37%",
+//     markers: true,
+//     scrub: 2,
+//   }
+// }
+gsap.from(".hero h1",{
   y: 120,
-  stagger: 0.2,
   duration: 1,
-  scrollTrigger: {
-    trigger: ".about_us",
-    scroller: "main",
-    start: "top 45%",
-    end: "top 37%",
-    markers: true,
-    scrub: 2,
-  }
-}
+})
+const tl = gsap.timeline()
   // tl.to("#section2 .horizontal2", {
   //   transform: "translateX(-90%)",
   //   scrollTrigger: {

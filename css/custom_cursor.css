@@ -21,8 +21,8 @@
 
     } */
     .cursor .cursor-dot{
-        width: 5px;
-        height: 5px;
+        width: 10px;
+        height: 10px;
         background-color: white;
 
     }
@@ -56,8 +56,8 @@
         border-radius: 50%;
         opacity: .5;
         border: 8px solid gray;
-        top: -8px;
-        left: -8px;
+        top: -10px;
+        left: -10px;
         /* transition-timing-function: ease-out; */
         /* animation: cursorAnim .5s infinite alternate; */
         animation: cursorAnim2 1s infinite alternate;

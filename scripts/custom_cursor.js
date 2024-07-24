@@ -23,6 +23,7 @@
 const cursorDiv = document.querySelector(".cursor");
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
+const interactableBigText = document.querySelector("[interactable-big-text]");
 
 window.addEventListener("mousemove", (e)=>{
     const posX = e.clientX;
@@ -41,4 +42,10 @@ window.addEventListener("mousemove", (e)=>{
     })
 }
 )
-
+interactableBigText.addEventListener("mouseover", (e)=>{
+    gsap.to(cursorOutline, {
+        scale: 2,
+        duration: 5,
+        ease: "power4.out"
+    })
+})
