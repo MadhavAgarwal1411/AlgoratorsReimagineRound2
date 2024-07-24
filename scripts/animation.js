@@ -11,7 +11,8 @@ tl.to("#section2 .horizontal", {
       pin: true,
     }
   })
-gsap.from(".aboutus-content"),{
+gsap.from(".aboutus-content"),
+  {
   y: 120,
   stagger: 0.2,
   duration: 1,

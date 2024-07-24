@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none!important;
+    /* cursor: none!important; */
 }
 *::-webkit-scrollbar{
     display: none;
@@ -12,7 +12,7 @@ body,html{
     height: 100%;
     scroll-behavior: none;
     overflow-x: hidden !important;
-    cursor: none;
+    /* cursor: none; */
 }
 
 .page0{
@@ -144,15 +144,16 @@ body,html{
 img{
     width: 100%;
     height: 100%;
-    object-fit: inherit;
+    object-fit: contain;
 }
 .header-images .img{
+    margin-bottom: 30%;
     height: 50vh;
     width: 20vw;
 }
 h1{
     text-transform: uppercase;
-    font-size: 10vw;
+    font-size: 15vw;
     font-weight: 400;
     letter-spacing: -4px;
 }
@@ -172,7 +173,7 @@ h1{
     color: white;
 }
 .part1 h1{
-    font-size: 19rem;
+    font-size: 15vw;
     text-align: center;
 }
 #section2 .part2{
@@ -190,7 +191,7 @@ h1{
 
 }
 #section2 .part3 h1{
-    font-size: 15rem;
+    font-size: 15vh;
     text-align: center;
     display: flex;
     justify-content: flex-end;
@@ -224,7 +225,7 @@ h1{
 }
 .about_us{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     background-color: black;
     color: white;
 }

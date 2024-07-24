@@ -3,7 +3,7 @@
     z-index: -1;
     width: 100vw;
     height: 100%;
-    object-fit: inherit;
+    object-fit: cover;
 }
 section.hero{
     width: 100vw;
@@ -63,15 +63,15 @@ section.info{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: black;
     color: white;
-    gap: 40%;
+    /* gap: 40%; */
 }
 
 .header-info p{
     padding: 1em;
-    font-size: 52px;
+    /* font-size: 52px; */
     font-weight: lighter;
 }
 
@@ -140,7 +140,7 @@ section.website-content{
 }
 
 .website-content h1{
-    font-size: 72px;
+    font-size: 15vw;
     letter-spacing: 0;
 }
 

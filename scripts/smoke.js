@@ -1432,7 +1432,7 @@ function correctRadius (radius) {
     return radius;
 }
 
-document.querySelector(".container").addEventListener('mouseover', e => {
+window.addEventListener('mouseover', e => {
     let posX = scaleByPixelRatio(e.offsetX);
     let posY = scaleByPixelRatio(e.offsetY);
     let pointer = pointers.find(p => p.id == -1);
@@ -1441,7 +1441,7 @@ document.querySelector(".container").addEventListener('mouseover', e => {
     updatePointerDownData(pointer, -1, posX, posY);
 });
 
-document.querySelector(".container").addEventListener('mousemove', e => {
+window.addEventListener('mousemove', e => {
     let pointer = pointers[0];
     if (!pointer.down) return;
     let posX = scaleByPixelRatio(e.offsetX);
