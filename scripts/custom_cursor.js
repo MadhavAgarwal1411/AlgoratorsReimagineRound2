@@ -1,6 +1,3 @@
-// let background = document.querySelector("main");
-// let cursor = document.querySelector(".cursor");
-
 // // background.addEventListener("mousemove", (dets)=>{
 // //     cursor.style.left = dets.pageX + "px";
 // //     cursor.style.top = dets.pageY + "px";
@@ -52,10 +49,6 @@ window.addEventListener("mousemove", (e)=>{
 }
 )
 interactableBigText.forEach((interactable)=>{interactable.addEventListener("mouseover", (e)=>{
-    gsap.to("interactable",{
-        scale: 3,
-        duration: .5,
-    });
     let keyFrames = {
         transform: `scale(3)`
     }
@@ -64,7 +57,6 @@ interactableBigText.forEach((interactable)=>{interactable.addEventListener("mous
         fill: "forwards"
     })
     // r.style.setProperty('--cursor-outline-radius', '6vw');
-
 })
 })
 interactableBigText.forEach((interactable)=>{interactable.addEventListener("mouseleave", (e)=>{
@@ -79,6 +71,38 @@ interactableBigText.forEach((interactable)=>{interactable.addEventListener("mous
 })
 })
 
-function myFunction_set() {
-  r.style.setProperty('--cursor-outline-radius', '6vw');
-}
+let nav_elements = document.querySelectorAll(".nav_element");
+
+nav_elements.forEach((nav_element)=>{nav_element.addEventListener("mouseover", (e)=>{
+    let keyFrames2 = {
+        opacity: 0.5,
+    }
+    cursorDot.animate(keyFrames2,{
+        duration: 800,
+        fill: "forwards"
+    })
+    cursorOutline.animate(keyFrames2,{
+        duration: 800,
+        fill: "forwards"
+    })
+    // r.style.setProperty('--cursor-outline-radius', '6vw');
+})
+})
+nav_elements.forEach((nav_element)=>{nav_element.addEventListener("mouseleave", (e)=>{
+    // r.style.setProperty('--cursor-outline-radius', '2vw');
+    let keyFrames = {
+        opacity: 1,
+    }
+    let keyFrames2 = {
+        opacity: 1,
+    }
+    cursorDot.animate(keyFrames,{
+        duration: 800,
+        fill: "forwards"
+    })
+    cursorOutline.animate(keyFrames2,{
+        duration: 800,
+        fill: "forwards"
+    })
+})
+})

@@ -56,7 +56,7 @@
         height: var(--cursor-outline-radius); 
         border-radius: 50%;
         opacity: .5;
-        border: 8px solid rgb(77, 73, 73);
+        border: 8px solid rgb(23, 19, 19);
         top: -10px;
         left: -10px;
         /* transition-timing-function: ease-out; */

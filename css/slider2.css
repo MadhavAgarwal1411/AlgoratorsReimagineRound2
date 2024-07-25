@@ -1,29 +1,3 @@
-:root {
-    --item1-transform: translate(-80%, -5%) scale(1.5);
-    --item1-filter: blur(30px);
-    --item1-zindex: 1003;
-    --item1-opacity: 0;
-
-    --item2-transform: translate(0, 0);
-    --item2-filter: blur(0);
-    --item2-zindex: 1002;
-    --item2-opacity: 1;
-
-    --item3-transform: translate(50%, 10%) scale(0.8);
-    --item3-filter: blur(10px);
-    --item3-zindex: 1001;
-    --item3-opacity: 1;
-
-    --item4-transform: translate(90%, 20%) scale(0.5);
-    --item4-filter: blur(30px);
-    --item4-zindex: 1000;
-    --item4-opacity: 1;
-
-    --item5-transform: translate(120%, 30%) scale(0.3);
-    --item5-filter: blur(40px);
-    --item5-zindex: 999;
-    --item5-opacity: 0;
-}
 .curve{
     position: absolute;
     height: 225px !important;
