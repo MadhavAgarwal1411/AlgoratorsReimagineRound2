@@ -32,6 +32,7 @@ tl.from(".nav_element",{
   y: -120,
   duration: .7,
   stagger: 0.1,
+  delay: 7,
   ease: "back.out"
 })
 tl.from(".hero h1",{
