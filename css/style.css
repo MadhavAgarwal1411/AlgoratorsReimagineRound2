@@ -14,7 +14,9 @@ body,html{
     overflow-x: hidden !important;
     cursor: none;
 }
-
+h1{
+    font-family: 'Clash Display', sans-serif;
+}
 /* preloader */
 
 .preloader video{
@@ -437,4 +439,9 @@ h1{
 }
 [interactable-big-text]{
     z-index: 99999!important;
+}
+@media(hover: none) {
+    .container3D{
+        display: none;
+    }
 }

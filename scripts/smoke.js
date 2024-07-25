@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 // Simulation section
-
+if (window.innerWidth > 800){
 const canvas = document.querySelector('#smoke-canvas');
 resizeCanvas();
 
@@ -1615,3 +1615,4 @@ function hashCode (s) {
     }
     return hash;
 };
+}
