@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <!-- <link rel="stylesheet" href="css/mouse_trail.css"> -->
     <!-- <link rel="stylesheet" href="css/scrolling_videos.css"> -->
 
@@ -177,12 +178,29 @@
             </section>
             <section class="website-content">
                 <div class="part1">
+                    <div class="wave">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                            preserveAspectRatio="none">
+                            <path
+                                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                                fill="white"></path>
+                        </svg>
+                    </div>
                     <h1 class="new quote" interactable-big-text>NEW ARRIVALS</h1>
+                    
                 </div>
                 <section id="section2">
                     <canvas id="smoke-canvas"></canvas>
                     <div class="blur"></div>
                     <div class="horizontal-container"style="overflow-x: hidden;">
+                        <div class="wave">
+                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                                preserveAspectRatio="none">
+                                <path
+                                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
                     <div class="horizontal">
                         <div class="part2">
                             <div class="page5">
@@ -251,6 +269,11 @@
             <div id="container3D" style="position: relative;"></div>
 
             <section class="about_us">
+                <div class="custom-shape-divider-top-1721904518">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#333333"></path>
+                    </svg>
+                </div>
                 <svg viewBox="0 0 1728 852" fill="none" preserveAspectRatio="xMidYMin slice">
                     <defs>
                         <filter id="displacementFilter">
@@ -387,7 +410,7 @@
     <script src="scripts/animation.js"></script>
     <script src="scripts/slider.js"></script>
     <script src="scripts/slider2.js"></script>
-    <script src="scripts/dat.gui.min.js"></script>
+    <!-- <script src="scripts/dat.gui.min.js"></script> -->
     <script src="scripts/smoke.js"></script>
     <script>
         let tl2 = gsap.timeline({
