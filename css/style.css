@@ -445,3 +445,12 @@ h1{
         display: none;
     }
 }
+@media (max-width: 800px){
+    .horizontal-container{
+        background-color: black;
+
+    }
+    .horizontal{
+        background-color: black;
+    }
+}
