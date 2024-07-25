@@ -25,11 +25,20 @@ tl3.to("#section2 .horizontal", {
 //     scrub: 2,
 //   }
 // }
-gsap.from(".hero h1",{
+const tl = gsap.timeline()
+
+tl.from(".nav_element",{
+  opacity: 0.2,
+  y: -120,
+  duration: .7,
+  stagger: 0.1,
+  ease: "back.out"
+})
+tl.from(".hero h1",{
+  opacity: 0,
   y: 120,
   duration: 1,
-})
-const tl = gsap.timeline()
+}, "-=0.5")
   // tl.to("#section2 .horizontal2", {
   //   transform: "translateX(-90%)",
   //   scrollTrigger: {

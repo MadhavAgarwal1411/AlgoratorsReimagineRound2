@@ -20,10 +20,13 @@
 //         fill: "forwards"
 //     })
 // })
+var r = document.querySelector(':root');
+
 const cursorDiv = document.querySelector(".cursor");
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
-const interactableBigText = document.querySelector("[interactable-big-text]");
+const cursorAfter = document.querySelector(".cursor-after");
+const interactableBigText = document.querySelectorAll("[interactable-big-text]");
 
 window.addEventListener("mousemove", (e)=>{
     const posX = e.clientX;
@@ -40,12 +43,42 @@ window.addEventListener("mousemove", (e)=>{
         duration: 1,
         ease: "power4.out"
     })
-}
-)
-interactableBigText.addEventListener("mouseover", (e)=>{
-    gsap.to(cursorOutline, {
-        scale: 2,
-        duration: 5,
+    gsap.to(cursorAfter, {
+        left : `${outlinPosX}px`,
+        top :`${outlinPosY}px`,
+        duration: 1,
         ease: "power4.out"
     })
+}
+)
+interactableBigText.forEach((interactable)=>{interactable.addEventListener("mouseover", (e)=>{
+    gsap.to("interactable",{
+        scale: 3,
+        duration: .5,
+    });
+    let keyFrames = {
+        transform: `scale(3)`
+    }
+    cursorOutline.animate(keyFrames,{
+        duration: 800,
+        fill: "forwards"
+    })
+    // r.style.setProperty('--cursor-outline-radius', '6vw');
+
 })
+})
+interactableBigText.forEach((interactable)=>{interactable.addEventListener("mouseleave", (e)=>{
+    // r.style.setProperty('--cursor-outline-radius', '2vw');
+    let keyFrames = {
+        transform: `scale(1)`
+    }
+    cursorOutline.animate(keyFrames,{
+        duration: 800,
+        fill: "forwards"
+    })
+})
+})
+
+function myFunction_set() {
+  r.style.setProperty('--cursor-outline-radius', '6vw');
+}

@@ -64,7 +64,9 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    z-index: 999999!important;
+    z-index: 999!important;
+    background-color: rgb(21, 21, 26);
+
 }
 
 .page6 .list {

@@ -67,7 +67,7 @@ topLight.position.set(15, 15, 50) //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
-const ambientLight = new THREE.AmbientLight(0xfff, objToRender === "dino" ? 5 : 10);
+const ambientLight = new THREE.AmbientLight(0xfff, objToRender === "dino" ? 10 : 0);
 scene.add(ambientLight);
 
 //This adds controls to the camera, so we can rotate / zoom it with the mouse
@@ -75,7 +75,6 @@ if (objToRender === "dino") {
   controls = new OrbitControls(camera, renderer.domElement);
 }
 // object.rotation.y = 1;
-// object.rotation.x = 0;
 //Render the scene
 function animate() {
   requestAnimationFrame(animate);
@@ -87,8 +86,11 @@ function animate() {
 
   if (object && objToRender === "watch") {
     //I've played with the constants here until it looked good 
-    object.rotation.y = -3 + mouseX / window.innerWidth * 3;
-    object.rotation.x = -1.2 + mouseY * 3 / window.innerHeight;
+    // object.rotation.y = 140;
+
+    object.rotation.y = -11 + mouseX / window.innerWidth * 3;
+    object.rotation.x = -12 + mouseY * 3 / window.innerHeight;
+    object.rotation.z = 4 + mouseY * 3 / window.innerHeight;
   }
   renderer.render(scene, camera);
 }

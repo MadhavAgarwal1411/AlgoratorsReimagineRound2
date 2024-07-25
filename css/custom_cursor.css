@@ -1,4 +1,6 @@
-
+:root{
+    --cursor-outline-radius: 2vw;
+}
 @media(hover: hover){
     /* .cursor{
         background-color: rgb(212, 53, 53) !important;
@@ -27,15 +29,14 @@
 
     }
      .cursor-outline{
-        width: 30px;
-        height: 30px; 
+        width: 2vw;
+        height: 2vw; 
         border: 2px solid hsla(0, 0%, 100%, 0.5);
         background-color: transparent;
         transition-duration: 200ms;
 
         transition-timing-function: ease-out;
         animation: cursorAnim 1s infinite alternate;
-
      }
      .cursor-outline, .cursor-dot{
         position: fixed;
@@ -51,11 +52,11 @@
      .cursor-outline::after{
         content: "";
         position: absolute;
-        width: 30px;
-        height: 30px; 
+        width: var(--cursor-outline-radius);
+        height: var(--cursor-outline-radius); 
         border-radius: 50%;
         opacity: .5;
-        border: 8px solid gray;
+        border: 8px solid rgb(77, 73, 73);
         top: -10px;
         left: -10px;
         /* transition-timing-function: ease-out; */
@@ -69,7 +70,7 @@
         }
 
         50%{
-            transform: scale(.7);
+            transform: scale(.4);
         }
         100%{
             transform: scale(1);

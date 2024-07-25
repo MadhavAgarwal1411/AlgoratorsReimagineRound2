@@ -15,6 +15,36 @@ body,html{
     cursor: none;
 }
 
+/* preloader */
+
+.preloader video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999999999999;
+    animation: idx 5s 5s forwards;
+}
+#main{
+    opacity: 0;
+    animation: idx2 5s 6s forwards;
+
+}
+@keyframes idx {
+    to{
+        z-index: -1000;
+        opacity: 0;
+    }
+}
+@keyframes idx2 {
+    to{
+        opacity: 1;
+    }
+}
+
+/* nav bar */
 .page0{
     width: 100%;
 }
@@ -200,11 +230,16 @@ h1{
 .header-info{
     position: relative;
 }
+
+/* 3d model */
+
 #container3D {
     position: relative;
     width: 100vw !important;
     height: 100vh !important;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(123, 93, 93); */
+    /* background-color: rgb(173, 171, 171); */
+    background-color: rgba(0,0,0,0.8);
 }
 #container3D canvas {
     position: absolute;
@@ -214,6 +249,7 @@ h1{
     height: 100%;
 }
 
+/* About us */
 
 .about_us .displacement{
     filter: url(#displacementFilter);
@@ -273,6 +309,8 @@ h1{
         gap: 15%;
     }
 }
+/* footer */
+
 .page10 footer{
     position: relative;
     width: 100%;
@@ -329,8 +367,9 @@ h1{
 
 .page10 .sci li a:hover{
     background-color: #84878632;
-    border: 2px solid #84878632;
     border-radius: 50%;
+    outline: 8px solid #84878632;
+    outline-offset: 5px; 
 }
 
 .page10 .sci li a svg{
@@ -395,4 +434,7 @@ h1{
 .page10 .copyrightText a{
     color: white;
     text-decoration: none;
+}
+[interactable-big-text]{
+    z-index: 99999!important;
 }

@@ -87,22 +87,27 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <video src="assets/videos/loader_video.mp4" autoplay muted></video>
+    </div>
+    <div id="main">
     <div class="cursor">
         <div class="cursor-outline" data-cursor-outline></div>
         <div class="cursor-dot" data-cursor-dot></div>
+        <div class="cursor-after"></div>
     </div>
     <main>
-        <div class="page0">
+        <div class="page0" style="position: absolute; top:0; left:0">
             <header>
                 <div class="navbar">
-                        <a href="#"><img width="90px" src="assets/images/logo.png" alt="" /></a>
+                        <a href="#"><img width="90px" src="assets/images/logo.png" alt="" class="nav_img"/></a>
                     <ul class="links">
-                        <li><a class="text-link" href="#">Yesterday</a></li>
-                        <li><a class="text-link" href="#">Today</a></li>
-                        <li><a class="text-link" href="#">Tomorrow</a></li>
-                        <li><a class="text-link" href="#">COSMIC ART</a></li>
-                        <li><a class="text-link" href="#">MECHANICAL WONDERS</a></li>
-                        <li><a class="text-link" href="#">BESPOKE</a></li>
+                        <li class="nav_element"><a class="text-link nav_element" href="#" >Yesterday</a></li>
+                        <li class="nav_element"><a class="text-link nav_element" href="#" >Today</a></li>
+                        <li class="nav_element"><a class="text-link nav_element" href="#" >Tomorrow</a></li>
+                        <li class="nav_element"><a class="text-link nav_element" href="#" >COSMIC ART</a></li>
+                        <li class="nav_element"><a class="text-link nav_element" href="#" >MECHANICAL WONDERS</a></li>
+                        <li class="nav_element"><a class="text-link nav_element" href="#" >BESPOKE</a></li>
                     </ul>
                     <div class="toggle_btn">
                         <i class="fa-solid fa-bars"></i>
@@ -126,9 +131,9 @@
                         class="hero-video cover interactable">
                         <source src="assets/videos/hero_video.mp4" type="video/mp4" />
                     </video>
-                    <h1 style="bottom: 2em;margin-bottom: 6vh;" interactable-big-text>ROYAL</h1>
+                    <h1 interactable-big-text>ROYAL</h1>
                 </section>
-                <div id="container3D"></div>
+                <!-- <div id="container3D"></div> -->
             </div>
         </section>
         <section class="section" id="section1" style="position: relative;">
@@ -144,7 +149,7 @@
                 </div>
             </section>
             <section class="header-info">
-                <h1 interactable-big-text>COSMIC ART</h1>
+    <h1 interactable-big-text >COSMIC ART</h1>
                 <div class="header-images">
                     <div class="img interactable">
                         <img src="assets/images/cosmic/image1.png" alt="" />
@@ -243,6 +248,8 @@
                 <button id="prev2">&lt;</button>
                 <button id="next2">&gt;</button>
             </div>
+            <div id="container3D" style="position: relative;"></div>
+
             <section class="about_us">
                 <svg viewBox="0 0 1728 852" fill="none" preserveAspectRatio="xMidYMin slice">
                     <defs>
@@ -282,6 +289,7 @@
                 </div>
                 
             </section>
+            
             <div class="page10" data-scroll>
                 <footer>
                     <div class="logo">
@@ -369,6 +377,7 @@
         </div>
 
     </main>
+</div>
     <script type="module" src="scripts/model.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
